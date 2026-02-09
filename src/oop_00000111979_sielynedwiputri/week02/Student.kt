@@ -3,9 +3,10 @@ package oop_00000111979_sielynedwiputri.week02
 class Student (
     val name: String,
     val nim: String,
-    var major: String
+    var major: String,
+    var gpa: Double = 0.0
 ){
-    constructor(name: String, nim: String) : this(name, nim, "Non_Matriculated") {
+    constructor(name: String, nim: String) : this(name, nim,"Non_Matriculated") {
         println("LOG: Menggunakan constructor jalur umum (Tanpa Jurusan).")
     }
     init {

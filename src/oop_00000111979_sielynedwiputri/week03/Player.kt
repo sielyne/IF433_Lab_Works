@@ -19,3 +19,13 @@ class Player (val username: String, ) {
         }
     }
 }
+
+fun main() {
+    val player = Player("Blanch")
+    //println(player.xp)
+
+    player.addXp(50)
+    player.addXp(60)
+
+    println("Current Level: ${player.level}")
+}

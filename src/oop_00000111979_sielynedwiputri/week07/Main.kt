@@ -36,4 +36,9 @@ fun main() {
         ApiResponse.Loading -> "Tampilkan Spinner"
     }
     println(uiMessage)
+
+
+    println("\n\n=== BAGIAN TUGAS MANDIRI ===")
+    GameManager.startGame()
+    GameManager.startGame()
 }

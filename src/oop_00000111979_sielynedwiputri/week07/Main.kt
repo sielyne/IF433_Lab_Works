@@ -41,4 +41,12 @@ fun main() {
     println("\n\n=== BAGIAN TUGAS MANDIRI ===")
     GameManager.startGame()
     GameManager.startGame()
+
+
+    println("Drop chance LEGENDARY: ${ItemRarity.LEGENDARY.dropChance}")
+    val starterWeapon = Weapon.forgeStarterSword()
+    println("Weapon: ${starterWeapon.item.name}")
+    println("Damage: ${starterWeapon.item.damage}")
+    println("Durability: ${starterWeapon.durability}")
+
 }

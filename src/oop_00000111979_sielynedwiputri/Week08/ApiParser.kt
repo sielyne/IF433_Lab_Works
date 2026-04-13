@@ -20,6 +20,11 @@ class ApiParser {
     }
 
     fun checkout(product: Product) {
+        when (product) {
+            is Electronic -> println("${product.name} (Warranty ${product.warrantyMonths})")
+            is Clothing -> println("${product.name} (Size ${product.size})")
+        }
+
         val id = when (product) {
             is Electronic -> product.id
             is Clothing -> product.id

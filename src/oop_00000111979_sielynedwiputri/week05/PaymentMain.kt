@@ -9,7 +9,7 @@ fun main(){
     for (acc in metode) {
         acc.processPayment(75000.0)
 
-        when (metode) {is EWallet -> {
+        when (metode) { is EWallet -> {
             println("Saldo kurang. Melakukan top up otomatis.")
             metode.topUp(50000.0)
             metode.processPayment(75000.0)

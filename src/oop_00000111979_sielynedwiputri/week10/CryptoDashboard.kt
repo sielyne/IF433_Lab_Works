@@ -10,7 +10,13 @@ fun main() {
     val response = NetworkResponse.ApiResponse("200 OK", coinRepo.getAll())
 
     println("Status: ${response.status}")
+    println("\n=== COIN ===")
     response.data.forEach {
         println("Coin: ${it.name}, Balance: ${it.balance}")
     }
+
+    val txRepo = WalletRepository<Transaction>()
+
+    txRepo.add(Transaction("T001", 50.0))
+    txRepo.add(Transaction("T002", 120.0))
 }

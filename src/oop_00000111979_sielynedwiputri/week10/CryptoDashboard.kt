@@ -6,4 +6,6 @@ fun main() {
     coinRepo.add(Coin("BTC", 12.5))
     coinRepo.add(Coin("ETH", 50.2))
     coinRepo.add(Coin("USDT", 85.7))
+
+    val response = NetworkResponse.ApiResponse("200 OK", coinRepo.getAll())
 }

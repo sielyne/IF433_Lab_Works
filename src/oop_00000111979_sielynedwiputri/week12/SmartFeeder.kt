@@ -13,7 +13,6 @@ fun dispenseKibble(requestedGram: Int, availableGram: Int, isJammed: Boolean): I
         throw FoodEmptyException(requestedGram, availableGram)
     }
     println("Kibble berhasil dikeluarkan!")
-
     return availableGram - requestedGram
 }
 
@@ -34,5 +33,10 @@ fun main() {
         println("Error umum: ${e.message}")
     } finally{
         println("Siklus pengecekan dispenser pagi selesai.")
+    }
+
+    val result = runCatching {
+        dispenseKibble(requestedGram = 30, availableGram = 1000, isJammed = false
+        )
     }
 }

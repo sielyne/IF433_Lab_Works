@@ -35,7 +35,7 @@ fun main() {
         println("Siklus pengecekan dispenser pagi selesai.")
     }
 
-    val result = runCatching {
+    runCatching {
         dispenseKibble(requestedGram = 30, availableGram = 1000, isJammed = false
         )
     } .onSuccess { newStock ->
